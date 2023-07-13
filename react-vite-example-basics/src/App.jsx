@@ -9,6 +9,14 @@ import Spinner from './components/spinner/Spinner'
 function App() {
   const [count, setCount] = useState(0)
 
+  const spiderman = { name: 'Spiderman', alterEgo: 'Peter Parker', catchPhrase: 'With great power comes great responsibility' };
+  const spideyJSX = (<div>
+    <h3>{spiderman.name}</h3>
+    <blockquote>{spiderman.catchPhrase}</blockquote>
+    <cite>{spiderman.alterEgo}</cite>
+  </div>);
+
+
   return (
     <>
       <div>
@@ -22,13 +30,12 @@ function App() {
       <h1>Vite + React</h1>
       <Counter></Counter>
       <Spinner></Spinner>
-      <Spinner></Spinner>
-      <Spinner></Spinner>
-      <Spinner></Spinner>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-      
+
+      {spideyJSX}
+
     </>
   )
 }
