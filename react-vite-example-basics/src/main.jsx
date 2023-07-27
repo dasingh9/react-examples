@@ -39,6 +39,6 @@ const cities = [
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BirthdayTranslator></BirthdayTranslator>
+    <GamesList games={games}></GamesList>
   </React.StrictMode>,
 )

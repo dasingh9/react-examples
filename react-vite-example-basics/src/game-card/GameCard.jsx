@@ -1,5 +1,4 @@
 function CardImage({src}) {
-    console.log(props.abc);
     return (
         <img className="card-img-top"
             src={src}
@@ -28,7 +27,7 @@ function GameCard(props) {
     return (
         <>
             <div className="card" style={{width: '18rem', height:"28rem", margin: "2rem"}}>
-                <CardImage src="https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/icon-48.gif"></CardImage>
+                <CardImage src={props.game.thumbnail}></CardImage>
                 <div className="card-body">
                     <h3>{props.game.title}</h3>
                     <p className="card-text">
