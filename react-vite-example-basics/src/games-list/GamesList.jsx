@@ -23,7 +23,7 @@ function GamesList (props) {
 
 
     const filterGameByGenre = function (genre) {
-        let filteredGames = originalGamesArray.filter(game => game.title.toLowerCase().includes(title.toLowerCase()));
+        let filteredGames = originalGamesArray.filter(game => game.genre.toLowerCase().includes(genre.toLowerCase()));
         setGames(filteredGames);
     }
 
@@ -48,9 +48,9 @@ function GamesFilter({onTitleChange, onGenreChange}) {
     }
 
     function handleGenreSearch(e) {
-        const titleText = e.target.value;
-        setTitle(titleText);
-        onGenreChange(titleText);
+        const genreText = e.target.value;
+        setTitle(genreText);
+        onGenreChange(genreText);
     }
 
     return (
