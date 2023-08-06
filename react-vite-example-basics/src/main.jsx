@@ -11,6 +11,9 @@ import City from './components/City'
 import MoviesList from './components/MoviesList'
 import MoodChanger from './components/MoodChanger'
 import BirthdayTranslator from './components/BirthdayTranslator'
+import Clock from './components/Clock'
+import ClockDisplay from './components/ClockDisplay'
+import ActivityFinder from './components/ActivityFinder'
 
 const gamesService = new GamesService();
 
@@ -39,6 +42,6 @@ const cities = [
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <GamesList games={games}></GamesList>
+    <ActivityFinder></ActivityFinder>
   </React.StrictMode>,
 )
