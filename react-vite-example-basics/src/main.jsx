@@ -14,6 +14,7 @@ import BirthdayTranslator from './components/BirthdayTranslator'
 import Clock from './components/Clock'
 import ClockDisplay from './components/ClockDisplay'
 import ActivityFinder from './components/ActivityFinder'
+import RefCounter from './components/RefCounter'
 
 const gamesService = new GamesService();
 
@@ -42,6 +43,6 @@ const cities = [
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <ActivityFinder></ActivityFinder>
+    <RefCounter></RefCounter>
   </React.StrictMode>,
 )

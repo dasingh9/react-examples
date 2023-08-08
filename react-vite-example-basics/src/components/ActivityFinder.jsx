@@ -3,12 +3,21 @@ import ActivityService from "../services/ActivityService";
 export default function ActivityFinder() { // Fetches a random activity
     const [participants, setParticipants] = useState(1);
     const [activity, setActivity] = useState('');
+
+    async function getActivityByParticipants(participants) {
+        ActivityService.getActivityByParticipants(participants)
+            .then((activityObject) => {
+                setActivity(activityObject.activity);
+            })
+            .catch((error) => {
+                console.log("Error occured in getActivityByParticipants", error);
+            })
+    }
+
     useEffect(() => {
-        async function getActivityByParticipants(participants) {
-            let activityObject = await ActivityService.getActivityByParticipants(participants);
-            setActivity(activityObject.activity);
-        }
+        
         getActivityByParticipants(participants);
+
     }, [participants]);
 
     return (
